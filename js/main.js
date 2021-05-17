@@ -1,10 +1,21 @@
-"use strict"
 let modal = document.querySelector('.modall');
-let btn_rent = document.querySelector('#btn-rent');
+
 function closeModall () {
 	modal.classList.add('hide');
 }
 function openModall () {
-	console.log(btn_rent)
 	modal.classList.remove('hide');
 }
+
+modal.addEventListener('click' , function(e){
+     const target = e.target;
+     if(target == modal || target == closeModal){
+     	modal.classList.add('hide');
+     }  
+});
+document.addEventListener('keydown' ,  function(event) {
+	const key = event.key;
+	if(key == 'Escape'){
+		modal.classList.add('hide');
+	}
+});
