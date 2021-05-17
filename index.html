@@ -14,11 +14,46 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modall.css">
 
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div class="modall modal_link hide">
 
+      <div class="modall modall-content">
+        <button class="btn-close icon-close" onclick="closeModall();"></button>
+        
+
+       <form action="#" method="post">
+              <div class="form-group row">
+                <div class="col-md-6 mb-4 mb-lg-0">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Email address">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6 mr-auto">
+                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
+                </div>
+              </div>
+            </form>
+      </div>
+    </div>
     
     <div class="site-wrap" id="home-section">
 
@@ -33,7 +68,7 @@
 
 
 
-      <header class="site-navbar site-navbar-target" role="banner">
+      <header class="site-navbar site-navbar-target z-ind" role="banner">
 
         <div class="container">
           <div class="row align-items-center position-relative">
@@ -100,7 +135,7 @@
                 </ul>
                 <div class="d-flex align-items-center bg-light p-3">
                   <span>$150/day</span>
-                  <a href="contact.html" class="ml-auto btn btn-primary">Rent Now</a>
+                  <button class="ml-auto btn btn-primary" id="btn-rent" onclick="openModall();">Rent Now</button>
                 </div>
               </div>
             </div>
@@ -401,6 +436,8 @@
 
 
   </body>
-
+<script src="js/main.js">
+  
+</script>
 </html>
 
